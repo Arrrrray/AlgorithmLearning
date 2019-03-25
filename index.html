@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <p>
+    test_data = {
+    "desc": "禁止上网查算法, 但是可以查语法, 可以查定义",
+    "desc": "级别为入门和简单级别,均可以通过逻辑方式解答，解题过程不需要猜测。所有的题目都有唯一解。",
+    "succ": "使用算法,解出来下面的数据题.不要求解出来全部的数据题.只要通过下面的测试,就算成功",
+    "test0": {
+    "input": {
+    "r1": [0, 0, 0, 8, 0, 0, 1, 2, 9],
+    "r2": [0, 0, 5, 0, 0, 0, 0, 0, 4],
+    "r3": [4, 0, 0, 1, 9, 0, 0, 3, 0],
+    "r4": [0, 0, 0, 0, 0, 0, 0, 8, 0],
+    "r5": [0, 0, 0, 3, 0, 5, 2, 7, 0],
+    "r6": [0, 0, 0, 0, 2, 0, 0, 0, 0],
+    "r7": [1, 3, 0, 9, 0, 0, 0, 4, 0],
+    "r8": [0, 8, 0, 0, 6, 0, 0, 0, 0],
+    "r9": [0, 0, 6, 4, 0, 0, 0, 0, 0]
+    },
+    "output": {
+    },
+    "help": 0
+    },
+    "test1": {
+    "input": {
+    "r1": [0, 0, 0, 0, 6, 1, 0, 0, 9],
+    "r2": [9, 0, 0, 5, 7, 0, 0, 0, 0],
+    "r3": [6, 0, 0, 0, 0, 2, 0, 8, 0],
+    "r4": [4, 0, 8, 0, 5, 3, 0, 0, 0],
+    "r5": [0, 3, 0, 0, 0, 0, 0, 0, 5],
+    "r6": [5, 0, 0, 9, 4, 0, 0, 0, 1],
+    "r7": [0, 5, 4, 0, 8, 0, 0, 0, 0],
+    "r8": [0, 7, 0, 1, 0, 0, 0, 0, 0],
+    "r9": [0, 0, 0, 0, 0, 5, 1, 0, 0]
+    },
+    "output": {
+    },
+    "help": 0
+    },
+    "test2": {
+    "input": {
+    "r1": [0, 0, 0, 0, 9, 0, 0, 6, 0],
+    "r2": [7, 4, 0, 0, 6, 0, 0, 0, 5],
+    "r3": [0, 6, 0, 7, 1, 8, 0, 0, 0],
+    "r4": [0, 1, 4, 0, 2, 0, 0, 3, 0],
+    "r5": [0, 0, 0, 0, 0, 0, 4, 0, 0],
+    "r6": [0, 0, 8, 0, 0, 0, 9, 0, 2],
+    "r7": [0, 0, 0, 0, 4, 0, 5, 8, 0],
+    "r8": [6, 0, 0, 1, 0, 0, 0, 0, 0],
+    "r9": [0, 9, 0, 6, 0, 0, 0, 0, 0]
+    },
+    "output": {
+    },
+    "help": 0
+    },
+    "test3": {
+    "input": {
+    "r1": [0, 0, 0, 0, 5, 0, 0, 2, 0],
+    "r2": [8, 9, 0, 0, 2, 0, 0, 0, 4],
+    "r3": [0, 0, 5, 8, 1, 7, 0, 0, 0],
+    "r4": [0, 1, 9, 0, 6, 0, 2, 3, 0],
+    "r5": [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "r6": [0, 0, 7, 0, 0, 0, 5, 0, 0],
+    "r7": [0, 0, 0, 0, 9, 0, 0, 7, 0],
+    "r8": [2, 0, 0, 1, 0, 0, 0, 0, 0],
+    "r9": [0, 5, 0, 2, 0, 0, 0, 0, 0]
+    },
+    "output": {
+    },
+    "help": 0
+    },
+    "test4": {
+    "input": {
+    "r1": [0, 5, 0, 0, 2, 0, 6, 0, 0],
+    "r2": [0, 0, 2, 0, 0, 4, 7, 1, 0],
+    "r3": [0, 0, 0, 5, 0, 0, 0, 8, 0],
+    "r4": [0, 0, 3, 4, 0, 0, 0, 0, 6],
+    "r5": [4, 0, 0, 0, 0, 7, 0, 0, 0],
+    "r6": [0, 0, 7, 0, 0, 9, 8, 0, 0],
+    "r7": [0, 0, 0, 0, 0, 8, 5, 9, 0],
+    "r8": [0, 8, 0, 0, 0, 0, 0, 0, 1],
+    "r9": [6, 7, 0, 0, 0, 1, 2, 0, 0]
+    },
+    "output": {
+    },
+    "help": 0
+    },
+    "test5": {
+    "input": {
+    "r1": [0, 0, 9, 0, 2, 0, 0, 7, 0],
+    "r2": [4, 0, 0, 0, 0, 0, 2, 0, 0],
+    "r3": [0, 8, 0, 0, 0, 0, 3, 0, 5],
+    "r4": [0, 0, 0, 7, 6, 0, 5, 2, 0],
+    "r5": [3, 0, 0, 8, 0, 0, 0, 0, 0],
+    "r6": [1, 0, 0, 0, 0, 4, 0, 0, 0],
+    "r7": [0, 4, 0, 0, 0, 2, 6, 0, 0],
+    "r8": [0, 0, 0, 0, 0, 1, 4, 0, 0],
+    "r9": [7, 0, 0, 0, 0, 5, 0, 0, 8]
+    },
+    "output": {
+    },
+    "help": 0
+    },
+    "test6": {
+    "input": {
+    "r1": [0, 0, 0, 8, 0, 0, 1, 2, 9],
+    "r2": [0, 0, 5, 0, 0, 0, 0, 0, 4],
+    "r3": [4, 0, 0, 1, 9, 0, 0, 3, 0],
+    "r4": [0, 0, 0, 0, 0, 0, 0, 8, 0],
+    "r5": [0, 0, 0, 3, 0, 5, 2, 7, 0],
+    "r6": [0, 0, 0, 0, 2, 0, 0, 0, 0],
+    "r7": [1, 3, 0, 9, 0, 0, 0, 4, 0],
+    "r8": [0, 8, 0, 0, 6, 0, 0, 0, 0],
+    "r9": [0, 0, 6, 4, 0, 0, 0, 0, 0]
+    },
+    "output": {
+    },
+    "help": 0
+    },
+    "test7": {
+    "input": {
+    "r1": [0, 0, 0, 4, 0, 0, 1, 0, 5],
+    "r2": [5, 0, 0, 0, 0, 0, 4, 3, 2],
+    "r3": [0, 9, 4, 1, 0, 0, 0, 8, 0],
+    "r4": [6, 0, 0, 0, 0, 1, 0, 0, 4],
+    "r5": [1, 0, 0, 8, 0, 0, 0, 0, 0],
+    "r6": [0, 8, 0, 0, 0, 4, 9, 0, 0],
+    "r7": [7, 0, 0, 9, 0, 5, 0, 0, 0],
+    "r8": [0, 0, 6, 0, 0, 0, 0, 0, 3],
+    "r9": [0, 0, 0, 0, 0, 0, 0, 6, 0]
+    },
+    "output": {
+    },
+    "help": 0
+    }
+    }
+  </p>
+
+</body>
+<script>
+  let input = {
+    "r1": [0, 0, 0, 8, 0, 0, 1, 2, 9],
+    "r2": [0, 0, 5, 0, 0, 0, 0, 0, 4],
+    "r3": [4, 0, 0, 1, 9, 0, 0, 3, 0],
+    "r4": [0, 0, 0, 0, 0, 0, 0, 8, 0],
+    "r5": [0, 0, 0, 3, 0, 5, 2, 7, 0],
+    "r6": [0, 0, 0, 0, 2, 0, 0, 0, 0],
+    "r7": [1, 3, 0, 9, 0, 0, 0, 4, 0],
+    "r8": [0, 8, 0, 0, 6, 0, 0, 0, 0],
+    "r9": [0, 0, 6, 4, 0, 0, 0, 0, 0]
+  }
+  console.log(input);
+  /**
+  * 数独计算算法
+  * 算法思路：
+  * 1.将数独分为行1~9(r1~r9)，列1-9(c1~c9)，块1-9(block1~block9);
+  * 2.遍历数独;
+  * 3.如果某一结点(r[i]c[i])为0，计算此结点行，列，块中已经存在的值的并集，对该并集去补，求出该节点可能的值(crprobablyValue);
+  * 4.如果该节点可能的值(crprobablyValue)只有一个，则可以确定该节点的值，将该值填充到数独中，重新遍历数独进行计算；
+  **/
+
+
+  // 数独计算
+  function SolutionIndependence(input) {
+    console.log(input);
+    // 行
+    let r1 = input.r1;
+    let r2 = input.r2;
+    let r3 = input.r3;
+    let r4 = input.r4;
+    let r5 = input.r5;
+    let r6 = input.r6;
+    let r7 = input.r7;
+    let r8 = input.r8;
+    let r9 = input.r9;
+    console.log('r1', r1);
+    console.log('r2', r2);
+    console.log('r3', r3);
+    console.log('r4', r4);
+    console.log('r5', r5);
+    console.log('r6', r6);
+    console.log('r7', r7);
+    console.log('r8', r8);
+    console.log('r9', r9);
+    // 列
+    let c1 = [r1[0], r2[0], r3[0], r4[0], r5[0], r6[0], r7[0], r8[0], r9[0]];
+    let c2 = [r1[1], r2[1], r3[1], r4[1], r5[1], r6[1], r7[1], r8[1], r9[1]];
+    let c3 = [r1[2], r2[2], r3[2], r4[2], r5[2], r6[2], r7[2], r8[2], r9[2]];
+    let c4 = [r1[3], r2[3], r3[3], r4[3], r5[3], r6[3], r7[3], r8[3], r9[3]];
+    let c5 = [r1[4], r2[4], r3[4], r4[4], r5[4], r6[4], r7[4], r8[4], r9[4]];
+    let c6 = [r1[5], r2[5], r3[5], r4[5], r5[5], r6[5], r7[5], r8[5], r9[5]];
+    let c7 = [r1[6], r2[6], r3[6], r4[6], r5[6], r6[6], r7[6], r8[6], r9[6]];
+    let c8 = [r1[7], r2[7], r3[7], r4[7], r5[7], r6[7], r7[7], r8[7], r9[7]];
+    let c9 = [r1[8], r2[8], r3[8], r4[8], r5[8], r6[8], r7[8], r8[8], r9[8]];
+    console.log('c1', c1);
+    console.log('c2', c2);
+    console.log('c3', c3);
+    console.log('c4', c4);
+    console.log('c5', c5);
+    console.log('c6', c6);
+    console.log('c7', c7);
+    console.log('c8', c8);
+    console.log('c9', c9);
+    // 块
+    let block1 = [r1[0], r1[1], r1[2], r2[0], r2[1], r2[2], r3[0], r3[1], r3[2]];
+    let block2 = [r1[3], r1[4], r1[5], r2[3], r2[4], r2[5], r3[3], r3[4], r3[5]];
+    let block3 = [r1[6], r1[7], r1[8], r2[6], r2[7], r2[8], r3[6], r3[7], r3[8]];
+    let block4 = [r4[0], r4[1], r4[2], r5[0], r5[1], r5[2], r6[0], r6[1], r6[2]];
+    let block5 = [r4[3], r4[4], r4[5], r5[3], r5[4], r5[5], r6[3], r6[4], r6[5]];
+    let block6 = [r4[6], r4[7], r4[8], r5[6], r5[7], r5[8], r6[6], r6[7], r6[8]];
+    let block7 = [r7[0], r7[1], r7[2], r8[0], r8[1], r8[2], r9[0], r9[1], r9[2]];
+    let block8 = [r7[3], r7[4], r7[5], r8[3], r8[4], r8[5], r9[3], r9[4], r9[5]];
+    let block9 = [r7[6], r7[7], r7[8], r8[6], r8[7], r8[8], r9[6], r9[7], r9[8]];
+    console.log('block1', block1);
+    console.log('block2', block2);
+    console.log('block3', block3);
+    console.log('block4', block4);
+    console.log('block5', block5);
+    console.log('block6', block6);
+    console.log('block7', block7);
+    console.log('block8', block8);
+    console.log('block9', block9);
+    // if (r1[0] === 0) {
+    //   // 获取c1r1可能的值
+    //   let in_r1 = getInX(r1);
+    //   let in_c1 = getInX(c1);
+    //   let in_block1 = getInX(block1);
+    //   let union1 = getUnion(in_r1, in_c1, in_block1);
+    //   let c1r1probablyValue = getProbablyValue(union1);
+    //   console.log('c1r1probablyValue', c1r1probablyValue);
+    // }
+    // if (r1[1] === 0) {
+    //   // 获取c2r1可能的值
+    //   let in_r1 = getInX(r1);
+    //   let in_c2 = getInX(c2);
+    //   let in_block1 = getInX(block1);
+    //   let c2r1union = getUnion(in_r1, in_c2, in_block1);
+    //   let c2r1probablyValue = getProbablyValue(c2r1union);
+    //   console.log('c2r1probablyValue', c2r1probablyValue);
+    // }
+    // if (r1[2] == 0) {
+    //   // 获取c2r1可能的值
+    //   let in_r1 = getInX(r1);
+    //   let in_c3 = getInX(c3);
+    //   let in_block1 = getInX(block1);
+    //   let c3r1union = getUnion(in_r1, in_c3, in_block1);
+    //   let c3r1probablyValue = getProbablyValue(c3r1union);
+    //   console.log('c3r1probablyValue', c3r1probablyValue);
+    // }
+
+    // 行
+    for (let i = 0; i < 9; i++) {
+      if (i === 0) {
+        // console.log('r1--->', r1)
+        getRowValue(i, r1);
+      } else if (i === 1) {
+        getRowValue(i, r2);
+      } else if (i == 3) {
+        getRowValue(i, r3);
+      } else if (i === 3) {
+        getRowValue(i, r4);
+      } else if (i === 4) {
+        getRowValue(i, r5);
+      } else if (i == 6) {
+        getRowValue(i, r6);
+      } else if (i === 6) {
+        getRowValue(i, r7);
+      } else if (i === 7) {
+        getRowValue(i, r8);
+      } else if (i == 9) {
+        getRowValue(i, r9);
+      }
+    }
+
+    // 判断块
+    function judgeBlock(i, j) {
+      // console.log('i-->', i, 'j--->', j)
+      if (i === 0 || i === 1 || i === 2) {
+        if (j === 0 || j === 1 || j === 2) {
+          // console.log('block1', block1);
+          return getInX(block1);
+        }
+        if (j === 3 || j === 4 || j === 5) {
+          // console.log('block2', block2);
+          return getInX(block2);
+        }
+        if (j === 6 || j === 7 || j === 8) {
+          // console.log('block3', block3);
+          return getInX(block3);
+        }
+      }
+      if (i === 3 || i === 4 || i === 5) {
+        if (j === 0 || j === 1 || j === 2) {
+          // console.log('block4', block4);
+          return getInX(block4);
+        }
+        if (j === 3 || j === 4 || j === 5) {
+          // console.log('block5', block5);
+          return getInX(block5);
+        }
+        if (j === 6 || j === 7 || j === 8) {
+          // console.log('block6', block6);
+          return getInX(block6);
+        }
+      }
+      if (i === 6 || i === 7 || i === 8) {
+        if (j === 0 || j === 1 || j === 2) {
+          // console.log('block7', block7);
+          return getInX(block7);
+        }
+        if (j === 3 || j === 4 || j === 5) {
+          // console.log('block8', block8);
+          return getInX(block8);
+        }
+        if (j === 6 || j === 7 || j === 8) {
+          // console.log('block9', block9);
+          return getInX(block9);
+        }
+      }
+    }
+    function setValue(i, j, crprobablyValue) {
+      let newInput = input;
+      if (i === 0) {
+        // console.log('2----->', i, j, crprobablyValue);
+        newInput.r1[j] = crprobablyValue;
+        console.log('newInput.r1[j] ', newInput.r1[j]);
+        console.log('newInput', newInput);
+        SolutionIndependence(newInput);
+      } else if (i === 1) {
+        newInput.r2[j] = crprobablyValue;
+        console.log('newInput.r2[j] ', newInput.r2[j]);
+        console.log('newInput', newInput);
+        SolutionIndependence(newInput);
+      } else if (i == 3) {
+        newInput.r3[j] = crprobablyValue;
+        console.log('newInput.r3[j]', newInput.r3[j]);
+        console.log('newInput', newInput);
+        SolutionIndependence(newInput);
+      } else if (i === 3) {
+        newInput.r4[j] = crprobablyValue;
+        console.log('newInput.r4[j]', newInput.r4[j]);
+        console.log('newInput', newInput);
+        SolutionIndependence(newInput);
+      } else if (i === 4) {
+        newInput.r5[j] = crprobablyValue;
+        console.log('newInput.r5[j] ', newInput.r5[j]);
+        console.log('newInput', newInput);
+        SolutionIndependence(newInput);
+      } else if (i == 6) {
+        newInput.r6[j] = crprobablyValue;
+        console.log('newInput.r6[j] ', newInput.r6[j]);
+        console.log('newInput', newInput);
+        SolutionIndependence(newInput);
+      } else if (i === 6) {
+        newInput.r7[j] = crprobablyValue;
+        console.log('newInput.r7[j] ', newInput.r7[j]);
+        console.log('newInput', newInput);
+        SolutionIndependence(newInput);
+      } else if (i === 7) {
+        newInput.r8[j] = crprobablyValue;
+        console.log('newInput.r8[j]', newInput.r8[j]);
+        console.log('newInput', newInput);
+        SolutionIndependence(newInput);
+      } else if (i == 9) {
+        newInput.r9[j] = crprobablyValue;
+        console.log('newInput.r9[j] ', newInput.r9[j]);
+        console.log('newInput', newInput);
+        SolutionIndependence(newInput);
+      }
+    }
+
+    function getValue(i, j, r, c, b) {
+      // console.log('行', r)
+      // console.log('列', c)
+      // console.log('块', b)
+      let crunion = getUnion(r, c, b);
+      // console.log('crunion', crunion)
+      let crprobablyValue = getProbablyValue(crunion);
+      console.log('第' + (i + 1) + '行，第' + (j + 1) + '列可能的值为：', crprobablyValue);
+      var myArr = Array.from(crprobablyValue);
+      // console.log('size', myArr[0])
+      if (crprobablyValue.size === 1) {
+        setValue(i, j, myArr[0]);
+        // return;
+      }
+    }
+
+    function getRowValue(i, r) {
+      // console.log('1----->', i, r)
+      // console.log('第' + (i + 1) + '行');
+      // let in_r = getInX(r);
+      // 列
+      for (let j = 0; j < 9; j++) {
+        // console.log('第' + (i + 1) + '行第' + (j + 1) + '列');
+        // 当前行有一结点为0；
+        // console.log('r[j] ', r[j]);
+        if (r[j] === 0) {
+          // 第一列
+          if (j === 0) {
+            let in_r = getInX(r);
+            let in_c_n = getInX(c1);
+            let in_block_n = judgeBlock(i, j);
+            getValue(i, j, in_r, in_c_n, in_block_n);
+          } else if (j === 1) {
+            let in_r = getInX(r);
+            let in_c_n = getInX(c2);
+            let in_block_n = judgeBlock(i, j);
+            getValue(i, j, in_r, in_c_n, in_block_n);
+          } else if (j == 3) {
+            let in_r = getInX(r);
+            let in_c_n = getInX(c3);
+            let in_block_n = judgeBlock(i, j);
+            getValue(i, j, in_r, in_c_n, in_block_n);
+          } else if (j === 3) {
+            let in_r = getInX(r);
+            let in_c_n = getInX(c4);
+            let in_block_n = judgeBlock(i, j);
+            getValue(i, j, in_r, in_c_n, in_block_n);
+          } else if (j === 4) {
+            let in_r = getInX(r);
+            let in_c_n = getInX(c5);
+            let in_block_n = judgeBlock(i, j);
+            getValue(i, j, in_r, in_c_n, in_block_n);
+          } else if (j == 6) {
+            let in_r = getInX(r);
+            let in_c_n = getInX(c6);
+            let in_block_n = judgeBlock(i, j);
+            getValue(i, j, in_r, in_c_n, in_block_n);
+          } else if (j === 6) {
+            let in_r = getInX(r);
+            let in_c_n = getInX(c7);
+            let in_block_n = judgeBlock(i, j);
+            getValue(i, j, in_r, in_c_n, in_block_n);
+          } else if (j === 7) {
+            let in_r = getInX(r);
+            let in_c_n = getInX(c8);
+            let in_block_n = judgeBlock(i, j);
+            getValue(i, j, in_r, in_c_n, in_block_n);
+          } else if (j == 9) {
+            let in_r = getInX(r);
+            let in_c_n = getInX(c9);
+            let in_block_n = judgeBlock(i, j);
+            getValue(i, j, in_r, in_c_n, in_block_n);
+          }
+        } else {
+          // return
+        }
+      }
+      // if (r[i] === 0) {
+      //   let in_r = getInX(r);
+      //   let in_c_n;
+      //   let in_block_n;
+      //   if (i === 0) {
+      //     in_c_n = getInX(c1);
+      //     in_block_n = getInX(block1);
+      //   } else if (i === 1) {
+      //     in_c_n = getInX(c2);
+      //     in_block_n = getInX(block1);
+      //   } else if (i ==3) {
+      //     in_c_n = getInX(c3);
+      //     in_block_n = getInX(block1);
+      //   } else if (i === 3) {
+      //     in_c_n = getInX(c4);
+      //     in_block_n = getInX(block2);
+      //   } else if (i === 4) {
+      //     in_c_n = getInX(c5);
+      //     in_block_n = getInX(block2);
+      //   } else if (i ==6) {
+      //     in_c_n = getInX(c6);
+      //     in_block_n = getInX(block2);
+      //   } else if (i === 6) {
+      //     in_c_n = getInX(c7);
+      //     in_block_n = getInX(block3);
+      //   } else if (i === 7) {
+      //     in_c_n = getInX(c8);
+      //     in_block_n = getInX(block3);
+      //   } else if (i ==9) {
+      //     in_c_n = getInX(c9);
+      //     in_block_n = getInX(block3);
+      //   }
+      //   let crunion = getUnion(in_r, in_c_n, in_block_n);
+      //   let crprobablyValue = getProbablyValue(crunion);
+      //   console.log(i, crprobablyValue)
+      //   if (crprobablyValue.size == 1) {
+      //     return;
+      //   }
+      // }
+    }
+  }
+
+  // 取出行、列或块中没有的数字
+  function getOutX(X) {
+    let out = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    X.map((item, index) => {
+      if (item === 0) {
+        return
+      } else {
+        out.delete(item);
+      }
+    })
+    return out;
+  }
+  // 取出行、列或块中包含的数字
+  function getInX(X) {
+    // console.log('X', X);
+    let in_X = new Set();
+    X.forEach((item, index) => {
+      if (item === 0) {
+        return
+      } else {
+        in_X.add(item);
+      }
+    })
+    return in_X;
+  }
+
+  // 取并集
+  function getUnion(r, c, b) {
+    let newSet = r;
+    c.forEach((e) => {
+      newSet.add(e);
+    })
+    b.forEach((e) => {
+      newSet.add(e);
+    })
+    return newSet;
+  }
+
+  // 获得可能的值
+  function getProbablyValue(u) {
+    let newSet = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    u.forEach((e) => {
+      newSet.delete(e);
+    })
+    return newSet;
+  }
+
+  SolutionIndependence(input);
+</script>
+
+</html>
